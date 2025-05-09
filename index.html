@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ethan García | Portafolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <div class="card-principal">
+  <header>
+    <h1>Ethan García</h1>
+    <p>Desarrollador Web en formación</p>
+    <button id="toggle-dark">🌙 Modo Oscuro</button>
+  </header>
+
+  <section class="perfil">
+    <img src="imagenes/avatar.jpg" alt="Avatar de Ethan García">
+    <div class="info">
+      <h2>Ethan García</h2>
+      <p>Desarrollador Web en formación, apasionado por la tecnología, los videojuegos y la creación de paginas Web.</p>
+      <p>Mi meta es seguir aprendiendo, colaborar con grandes proyectos y montar la mejor tienda de Puerto Rico.</p>
+      <a href="https://github.com/ethangarcia" class="btn-github" target="_blank">Ver GitHub</a>
+    </div>
+  </section>
+
+  <nav>
+    <ul>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <section id="proyectos">
+    <h2>Mis Proyectos</h2>
+
+    <div class="card-proyecto">
+      <img src="imagenes/holder.jpgg.png" alt="LevelUpComponent en desarrollo">
+      <div class="contenido-proyecto">
+        <h3>LevelUpComponent (En desarrollo)</h3>
+        <p>Proyecto de tienda gamer con carrito, búsqueda avanzada y secciones interactivas. Actualmente en desarrollo con HTML, CSS, PHP y MySQL.</p>
+        <span class="estado">⏳ Disponible pronto</span>
+      </div>
+    </div>
+  </section>
+
+<!--  List -->
+<div class="card-proyecto">
+  <img src="imagenes/lista.jpg.png" alt="To-Do List App">
+  <div class="contenido-proyecto">
+    <h3>To-Do List</h3>
+    <p>Lista de tareas interactiva con JavaScript y almacenamiento en localStorage. Permite agregar, completar y eliminar tareas fácilmente.</p>
+    <a href="to-do-list/todo.html" class="btn-demo" target="_blank">Ver Demo</a>
+    <a href="https://github.com/ethangarcia/todo-list" class="btn-codigo" target="_blank">Ver Código</a>
+  </div>
+</div>
+
+<!--  Discord Lite -->
+<div class="card-proyecto">
+  <img src="imagenes/discord.jpg.png" alt="Página inspirada en Discord">
+  <div class="contenido-proyecto">
+    <h3>Discord Lite</h3>
+    <p>Diseño web oscuro inspirado en Discord. Incluye navegación, llamada a la acción, secciones de funciones.</p>
+    <a href="Discord/discord-clon.html" class="btn-demo" target="_blank">Ver Demo</a>
+    <a href="https://github.com/ethangarcia/discord-lite" class="btn-codigo" target="_blank">Ver Código</a>
+  </div>
+</div>
+
+
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: <a href="ethangarci16@gmail.com">ethangarci16@gmail.com</a></p>
+    <p>Teléfono: +1 (939) 244-9184</p>
+  </section>
+
+</div>
+
+  <footer>
+    <p>&copy; 2025 Ethan García - Todos los derechos reservados</p>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('toggle-dark');
+    const body = document.body;
+  
+    if (localStorage.getItem('modo') === 'oscuro') {
+      body.classList.add('dark-mode');
+      btn.textContent = '☀️ Modo Claro';
+    }
+    btn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const modoActual = body.classList.contains('dark-mode') ? 'oscuro' : 'claro';
+      localStorage.setItem('modo', modoActual);
+      btn.textContent = modoActual === 'oscuro' ? '☀️ Modo Claro' : '🌙 Modo Oscuro';
+    });
+  </script>
+  
+  
+</body>
+</html>
