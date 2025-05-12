@@ -1,0 +1,167 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  background-color: #1b1b1b;
+  color: white;
+}
+
+/* Banner principal */
+.banner {
+  background-image: url('imagenes/banner-mc.jpg ');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  padding: 40px 20px;
+  color: white;
+  font-size: 1.2rem;
+  border-bottom: 4px solid #4caf50;
+}
+
+.mc-header {
+  background-color: #2e7d32;
+  padding: 20px;
+  text-align: center;
+  border-bottom: 4px solid #388e3c;
+}
+
+.mc-contenido {
+  padding: 30px;
+  display: block;
+}
+
+.producto {
+  background-color: #2c2c2c;
+  border: 2px solid #4caf50;
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  margin: 0 auto 30px auto;
+  transition: transform 0.3s ease;
+}
+
+.producto:hover {
+  transform: scale(1.05);
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #66bb6a;
+}
+
+/* Sección info VIP */
+.info-vip {
+  background-color: #212121;
+  padding: 30px;
+  border-top: 2px solid #4caf50;
+  text-align: center;
+}
+
+.info-vip ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-vip li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+/* Botón Discord */
+.discord-container {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.btn-discord {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: #7289da;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-discord:hover {
+  background-color: #5b6eae;
+}
+.ticket {
+  background-color: #333;
+  border: 2px dashed #4caf50;
+  padding: 20px;
+  width: 80%;
+  max-width: 400px;
+  margin: 30px auto;
+  border-radius: 10px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0,255,0,0.2);
+  animation: fadeIn 0.5s ease;
+}
+
+.ticket .alerta {
+  margin-top: 15px;
+  font-style: italic;
+  color: #ffeb3b;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.contacto {
+  background-color: #2e2e2e;
+  padding: 40px 20px;
+  text-align: center;
+  border-top: 2px solid #4caf50;
+}
+
+.contacto h2 {
+  margin-bottom: 10px;
+}
+
+.contacto form {
+  max-width: 400px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contacto input,
+.contacto textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  resize: none;
+}
+
+.contacto button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contacto button:hover {
+  background-color: #66bb6a;
+}
+
+.discord-texto {
+  margin-top: 20px;
+  font-size: 0.95rem;
+}

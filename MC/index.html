@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda Minecraft - Demo</title>
+<link rel="stylesheet" href="style.css"></head>
+<body>
+
+  <!-- Banner con IP del servidor -->
+  <section class="banner">
+    <h2>IP: play.minecraftserver.net</h2>
+    <p>Versión 1.20.x | Survival | PvP | Eventos diarios</p>
+  </section>
+
+  <!-- Header / Título principal -->
+  <header class="mc-header">
+    <h1>🛒 Tienda VIP - Minecraft Server</h1>
+    <p>Apoya el servidor y consigue ventajas exclusivas</p>
+  </header>
+
+  <!-- Sección de Productos -->
+  <main class="mc-contenido">
+    <section class="mc-productos">
+      <div class="producto">
+        <h2>VIP BRONCE</h2>
+        <p>✔️ Chat de color <br> ✔️ Kit semanal <br> ✔️ Prefijo especial</p>
+        <button>Comprar</button>
+      </div>
+
+      <div class="producto">
+        <h2>VIP DIAMANTE</h2>
+        <p>✨ Fly <br> ✨ Kit diario <br> ✨ Canal privado en Discord</p>
+        <button>Comprar</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Info adicional -->
+  <section class="info-vip">
+    <h2>¿Qué incluye cada rango?</h2>
+    <ul>
+      <li>🎖️ Prefijos especiales</li>
+      <li>🎒 Kits exclusivos</li>
+      <li>🚀 Comandos únicos como /fly y /heal</li>
+      <li>💎 Acceso a zonas VIP</li>
+    </ul>
+  </section>
+
+  <!-- Botón de Discord -->
+  <div class="discord-container">
+    <a href="https://discord.gg/tu-server" class="btn-discord" target="_blank">Únete a nuestro Discord</a>
+  </div>
+
+
+
+<div id="ticket" class="ticket" style="display: none;">
+  <h2>🎟️ Ticket de Compra</h2>
+  <p><strong>Rango:</strong> <span id="ticket-rango"></span></p>
+  <p><strong>Fecha:</strong> <span id="ticket-fecha"></span></p>
+  <p><strong>ID:</strong> <span id="ticket-id"></span></p>
+  <p class="alerta">📸 Tómale screenshot y envíalo por Discord</p>
+</div>
+
+<section class="contacto">
+  <h2>📬 Contacto</h2>
+  <p>¿Tienes dudas o problemas con tu compra? Contáctanos:</p>
+  
+  <form>
+    <input type="text" placeholder="Tu nombre" required>
+    <input type="email" placeholder="Tu correo" required>
+    <textarea placeholder="Escribe tu mensaje aquí..." required></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+
+  <p class="discord-texto">También puedes escribirnos en nuestro <a href="https://discord.gg/tu-server" target="_blank">Discord oficial</a></p>
+</section>
+
+
+<script src="java.js"></script>
+</body>
+</html>
