@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>PizzaZone - Menú</title>
+ 
+</head>
+<body>
+  <header>
+    <h1>PizzaZone</h1>
+    <nav>
+      <button onclick="toggleCart()">🛒 Ver Carrito</button>
+    </nav>
+  </header>
+
+  <section class="menu-container" id="menu">
+    <!-- Pizza Items -->
+    <div class="pizza-card">
+      <img src="imagenes/Peperoni.jpg" alt="Pepperoni" />
+      <div class="info">
+        <h3>Pizza Pepperoni</h3>
+        <p>Clásica con extra queso y pepperoni crujiente.</p>
+        <p><strong>$20.49</strong></p>
+        <button onclick="addToCart('Pizza Pepperoni', 20.49)">Agregar</button>
+      </div>
+    </div>
+    <div class="pizza-card">
+      <img src="imagenes/queso.jpg" alt="queso" />
+      <div class="info">
+        <h3>Pizza queso</h3>
+        <p>Deliciosa Pizza solo con queso mozzarella y salsa marinara</p>
+        <p><strong>$20.49</strong></p>
+        <button onclick="addToCart('Pizza de queso', 20.49)">Agregar</button>
+      </div>
+    </div>
+    <div class="pizza-card">
+      <img src="imagenes/vegi.jpg" alt="Vegetariana" />
+      <div class="info">
+        <h3>Veggie Lover's</h3>
+        <p>Pimientos, aceitunas, cebolla y tomate.</p>
+        <p><strong>$26.99</strong></p>
+        <button onclick="addToCart('Pizza Vegetariana', 26.99)">Agregar</button>
+      </div>
+    </div>
+     <div class="pizza-card">
+      <img src="imagenes/hawa.jpg" alt="Hawaiana" />
+      <div class="info">
+        <h3>Hawaiana</h3>
+        <p>Deliciosa combinacion de jamon y trosos de pina.</p>
+        <p><strong>$26.99</strong></p>
+        <button onclick="addToCart('Pizza Hawaiana', 26.99)">Agregar</button>
+      </div>
+    </div>
+    <div class="pizza-card">
+      <img src="imagenes/meat.jpg" alt="Meat" />
+      <div class="info">
+        <h3>Pan Pizza Mediana Meat Lover's</h3>
+        <p>6 tipos de carnes: jamón, tocineta, res, cerdo, pepperoni y salchicha</p>
+        <p><strong>$22.49</strong></p>
+        <button onclick="addToCart('Pizza Meat Lovers', 22.49)">Agregar</button>
+      </div>
+    </div>
+ <div class="pizza-card">
+      <img src="imagenes/alitas sin hueso.jpg" alt="alitas" />
+      <div class="info">
+        <h3>Alitas sin hueso</h3>
+        <p>Deliciosas y jugosas alitas sin hueso empanadas. Preparadas al momento para disfrutar su sabor al máximo.</p>
+        <p><strong>$8.99</strong></p>
+        <button onclick="addToCart('alitas sin hueso', 8.99)">Agregar</button>
+      </div>
+    </div>
+ <div class="pizza-card">
+      <img src="imagenes/alitas tradicionales con hueso.jpg" alt="Alitas tradicionales" />
+      <div class="info">
+        <h3>Alitas tradicionales con hueso</h3>
+        <p>Ricas, calientes y jugosas alitas con un toque picantito. Preparadas al momento para disfrutar su sabor al máximo.</p>
+        <p><strong>$12.99</strong></p>
+        <button onclick="addToCart('alitas tradicionales', 12.99)">Agregar</button>
+      </div>
+    </div>
+ <div class="pizza-card">
+      <img src="imagenes/sampler.jpg" alt="Sampler" />
+      <div class="info">
+        <h3>Sampler</h3>
+        <p>Un poquito de todo. 4 Alitas Tradicionales, 4 Mozzarella Sticks y una orden de Palitroques individuales regulares.</p>
+        <p><strong>$14.99</strong></p>
+        <button onclick="addToCart('Pizza Vegetariana', 14.99)">Agregar</button>
+      </div>
+    </div>
+ <div class="pizza-card">
+      <img src="imagenes/palitroques familiares con queso.jpg" alt="Palitroques" />
+      <div class="info">
+        <h3>Palitroques Familiares con Queso</h3>
+        <p>Crujientes por fuera y suaves por dentro. Cubiertos con queso mozzarella derretido y servidos con salsa marinara</p>
+        <p><strong>$13.99</strong></p>
+        <button onclick="addToCart('Pizza Vegetariana', 13.99)">Agregar</button>
+      </div>
+    </div>
+    <div class="pizza-card">
+      <img src="imagenes/pan.jpg" alt="pan" />
+      <div class="info">
+        <h3>Pan Italiano con ajo familiares</h3>
+        <p>8 rebanadas de nuestro delicioso pan italiano con ajo.</p>
+        <p><strong>$9.28</strong></p>
+        <button onclick="addToCart('Pizza Hawaiana', 9.28)">Agregar</button>
+      </div>
+    </div>
+ <div class="pizza-card">
+  <img src="imagenes/Mitad y Mitad.jpg" alt="Mitad y Mitad" />
+  <div class="info">
+    <h3>🌓 Mitad & Mitad</h3>
+    <p>Combina dos sabores en una sola pizza.</p>
+    <button onclick="toggleHalfPizza()">Personalizar</button>
+
+    <div id="half-builder" style="display:none; margin-top: 1rem;">
+      <p><strong>Mitad 1:</strong></p>
+      <select id="half1">
+        <option value="">-- Selecciona --</option>
+        <option value="Pepperoni">Pepperoni</option>
+        <option value="Hawaiana">Hawaiana</option>
+        <option value="Vegetariana">Vegetariana</option>
+        <option value="BBQ">BBQ</option>
+        <option value="4 Quesos">4 Quesos</option>
+      </select>
+
+      <p><strong>Mitad 2:</strong></p>
+      <select id="half2">
+        <option value="">-- Selecciona --</option>
+        <option value="Pepperoni">Pepperoni</option>
+        <option value="Hawaiana">Hawaiana</option>
+        <option value="Vegetariana">Vegetariana</option>
+        <option value="BBQ">BBQ</option>
+        <option value="4 Quesos">4 Quesos</option>
+      </select>
+
+      <br><br>
+      <button onclick="addHalfPizza()">Agregar al carrito</button>
+    </div>
+  </div>
+</div>
+
+ <div class="pizza-card">
+  <img src="imagenes/crea tu pizza.jpg" alt="Crea tu pizza" />
+  <div class="info">
+    <h3>🧑‍🍳 ¡Crea tu Pizza!</h3>
+    <p>Personaliza ingredientes</p>
+    <button onclick="togglePizzaBuilder('Crea tu Pizza', 20.00)">Personalizar</button>
+
+    <div id="pizza-builder" style="display:none; margin-top: 1rem;">
+      <p><strong>Selecciona tus ingredientes:</strong></p>
+      <label><input type="checkbox" value="Pepperoni" /> Pepperoni</label><br>
+      <label><input type="checkbox" value="Jamón" /> Jamón</label><br>
+      <label><input type="checkbox" value="Queso extra" /> Queso extra</label><br>
+      <label><input type="checkbox" value="Piña" /> Piña</label><br>
+      <label><input type="checkbox" value="Cebolla" /> Cebolla</label><br>
+      <button onclick="addCustomPizza()">Agregar al carrito</button>
+    </div>
+  </div>
+</div>
+
+
+  </section>
+
+  <div id="cart">
+    <h2>🛒 Tu pedido</h2>
+    <button onclick="toggleCart()" style="background:#b91c1c; color:white; border:none; padding:0.3rem 0.7rem; margin-bottom:1rem; border-radius:5px; cursor:pointer;">Cerrar ✖️</button>
+    <div id="cart-items"></div>
+    <div id="total">Total: $0.00</div>
+    <button id="checkout" onclick="checkout()">Finalizar Pedido</button>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 PizzaZone | Demo sin pagos</p>
+  </footer>
+<script src="java.js"></script>
+</body>
+</html>
