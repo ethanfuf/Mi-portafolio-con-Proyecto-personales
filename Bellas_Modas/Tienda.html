@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Tienda</title>
+</head>
+<body>
+    <header>
+    <div class="logo">BellaModas</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="Tienda.html">Tienda</a>
+    </nav>
+    <button class="cart-btn" onclick="toggleCart()">🛒 Carrito</button>
+  </header>
+ <section id="tienda">
+    <nav class="subnav">
+      <a href="Pantalones.html">Pantalones</a>
+      <a href="Camisas.html">Camisas</a>
+      <a href="Bikini.html">Trajes de baño</a>
+    </nav>
+ <section class="hero" id="inicio">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="Videos/ropa2.mp4" type="video/mp4" />
+      Tu navegador no soporta video HTML5.
+    </video>
+  </section>
+
+
+<section class="slider-container">
+  <div class="slider">
+    <div class="slide active">
+      <img src="imagenes/slide1.jpg" alt="Anuncio 1">
+    </div>
+    <div class="slide">
+      <img src="imagenes/silder2.jpg" alt="Anuncio 2">
+    </div>
+    <div class="slide">
+      <img src="imagenes/slider3.jpg" alt="Anuncio 3">
+    </div>
+      <div class="slide">
+      <video autoplay muted loop playsinline class="slider-video">
+        <source src="Videos/silder.mp4" type="video/mp4">
+      </video>
+      </div>
+    <button class="prev" onclick="prevSlide()">❮</button>
+    <button class="next" onclick="nextSlide()">❯</button>
+
+    <div class="dots" id="dots-container"></div>
+  </div>
+</section>
+
+
+
+<div class="galeria-fotos">
+  <div class="card-foto">
+    <img src="imagenes/bikini.jpg" alt="Bikini">
+    <h2>Bikini</h2>
+    <a href="Bikini.html"class="btn-ver">Ver Productos</a>
+  </div>
+  <div class="card-foto">
+    <img src="imagenes/vestido.jpg" alt="Vestido">
+    <h2>Vestido</h2>
+    <a href="Camisas.html"class="btn-ver">Ver Productos</a>
+  </div>
+  <div class="card-foto">
+    <img src="imagenes/combinacion.jpg" alt="Combinación">
+    <h2>Combinacion</h2>
+    <a href="Camisas.html"class="btn-ver">Ver Productos</a>
+  </div>
+  <div class="card-foto">
+    <img src="imagenes/t-shirt.jpg" alt="T-Shirt">
+    <h2>T-shirt</h2>
+    <a href="Camisas.html"class="btn-ver">Ver Productos</a>
+  </div>
+  <div class="card-foto">
+    <img src="imagenes/pantalo.jpg" alt="Pantalones">
+    <h2>Pantalones</h2>
+      <a href="Pantalones.html" class="btn-ver">Ver Productos</a>
+  </div>
+</div>
+
+
+
+
+
+
+  <aside id="cart">
+    <h2>🛍️ Tu carrito</h2>
+    <div id="cart-items"></div>
+    <div id="total">Total: $0.00</div>
+    <button onclick="checkout()">Finalizar Pedido</button>
+    <button onclick="toggleCart()">Cerrar</button>
+  </aside>
+    <footer>
+    <p>&copy; 2025 BellaModas. Todos los derechos reservados.</p>
+    </footer>
+  <script src="java.js"></script>
+  <div id="image-modal" onclick="closeModal()">
+  <span onclick="closeModal()">✖</span>
+  <img id="modal-img" src="" alt="Imagen ampliada" />
+</body>
+</html>

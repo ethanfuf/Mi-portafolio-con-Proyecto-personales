@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BellaModas-Pantalones</title>
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="Ropas.css">
+</head>
+<body>
+    <header>
+    <div class="logo">BellaModas</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="tienda.html">Tienda</a>
+    </nav>
+    <button class="cart-btn" onclick="toggleCart()">🛒 Carrito</button>
+  </header>
+ <section class="hero-section">
+    <h1 class="titulo-categoria">👚👗 Camisas de Temporada</h1>
+   <p class="subtitulo-categoria">Descubre las mejores prendas para lucir tu estilo esta temporada 👗</p>
+  </section>
+
+ <section id="tienda">
+    <nav class="subnav">
+      <a href="Pantalones.html">Pantalones</a>
+      <a href="Camisas.html">Camisas</a>
+      <a href="Bikini.html">Traje de baño</a>
+    </nav>
+  </section>
+
+<section class="hero" id="inicio">
+    <video autoplay muted loop playsinline class="hero-video">
+      <source src="Videos/zara.mp4" type="video/mp4" />
+      Tu navegador no soporta video HTML5.
+    </video>
+</section>
+<main class="product-container">
+    <div class="product-card">
+  <img src="pantalon/pantalon1.jpg" alt="Pantalón" onclick="showImage(this.src)" />
+  <h3></h3>
+  <p>$29.99</p>
+  <button onclick="addToCart('', 29.99)">Agregar</button>
+</div>
+
+<div class="product-card">
+  <img src="pantalon/pantalon2.jpg" alt="Pantalón" onclick="showImage(this.src)" />
+  <h3></h3>
+  <p>$34.50</p>
+  <button onclick="addToCart('', 34.50)">Agregar</button>
+</div>
+
+<div class="product-card">
+  <img src="pantalon/pantalon3.jpg" alt="Pantalón" onclick="showImage(this.src)" />
+  <h3></h3>
+  <p>$39.99</p>
+  <button onclick="addToCart('', 39.99)">Agregar</button>
+</div>
+
+<div class="product-card">
+  <img src="pantalon/pantalon4.jpg" alt="Pantalón" onclick="showImage(this.src)" />
+  <h3></h3>
+  <p>$44.00</p>
+  <button onclick="addToCart('', 44.00)">Agregar</button>
+</div>
+
+<div class="product-card">
+  <img src="pantalon/pantalon5.jpg" alt="Pantalón" onclick="showImage(this.src)" />
+  <h3></h3>
+  <p>$27.75</p>
+  <button onclick="addToCart('', 27.75)">Agregar</button>
+</div>
+
+<div class="product-card">
+  <img src="pantalon/pantalon6.jpg" alt="Pantalón" onclick="showImage(this.src)" />
+  <h3></h3>
+  <p>$31.20</p>
+  <button onclick="addToCart('', 31.20)">Agregar</button>
+</div>
+
+<div class="product-card">
+  <img src="pantalon/pantalon7.jpg" alt="Pantalón" onclick="showImage(this.src)" />
+  <h3></h3>
+  <p>$36.80</p>
+  <button onclick="addToCart('', 36.80)">Agregar</button>
+</div>
+
+<div class="product-card">
+  <img src="pantalon/pantalon8.jpg" alt="Pantalón" onclick="showImage(this.src)" />
+  <h3></h3>
+  <p>$42.99</p>
+  <button onclick="addToCart('', 42.99)">Agregar</button>
+</div>
+
+<div class="product-card">
+  <img src="pantalon/pantalon9.jpg" alt="Pantalón" onclick="showImage(this.src)" />
+  <h3></h3>
+  <p>$38.40</p>
+  <button onclick="addToCart('', 38.40)">Agregar</button>
+</div>
+
+<div class="product-card">
+  <img src="pantalon/pantalon10.jpg" alt="Pantalón" onclick="showImage(this.src)" />
+  <h3></h3>
+  <p>$33.99</p>
+  <button onclick="addToCart('', 33.99)">Agregar</button>
+</div>
+
+</main>
+
+ <aside id="cart">
+    <h2>🛍️ Tu carrito</h2>
+    <div id="cart-items"></div>
+    <div id="total">Total: $0.00</div>
+    <button onclick="checkout()">Finalizar Pedido</button>
+    <button onclick="toggleCart()">Cerrar</button>
+  </aside>
+
+  <footer>
+    <p>&copy; 2025 BellaModas. Todos los derechos reservados.</p>
+  </footer>
+
+  <div id="image-modal" onclick="closeModal()">
+    <span onclick="closeModal()">✖</span>
+    <img id="modal-img" src="" alt="Imagen ampliada" />
+  </div>
+<script src="java.js"></script>
+</body>
+</html>
